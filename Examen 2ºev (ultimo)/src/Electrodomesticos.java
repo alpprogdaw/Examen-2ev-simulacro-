@@ -1,5 +1,5 @@
 
-public abstract class Electrodomesticos {
+public abstract class Electrodomesticos implements Comparable<Electrodomesticos> {
 	
 	/*private static Map<Character, Float> precioPorConsumo = new HashMap<>();
 	
@@ -97,5 +97,14 @@ public abstract class Electrodomesticos {
 		}
 		precio_final = precio_base + (precio_consumo + precio_peso);
 		return precio_final;
+	}
+	
+	@Override
+	public int compareTo(Electrodomesticos e) {
+		if (precio_base < e.precio_base)
+			return -1;
+		else if (precio_base > e.precio_base)
+			return 1;
+		return 0;
 	}
 }
