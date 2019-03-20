@@ -15,4 +15,8 @@ public class Televisores extends Electrodomesticos {
 		this.tdt = tdt;
 	}
 
+	@Override
+	public String toString() {
+		return super.toString() + "Televisores [tamaño=" + tamaño + ", tdt=" + tdt + "]";
+	}
 }
